@@ -1,5 +1,6 @@
 # JannatulKhanam_01834019820.zip.
 Assessments for Internship : 
+
 Section-01: MySQL Challenge: In MySQL Challenge, Create two tables (employees and salary) and insert data as the screenshot below.
 After that answer the below questions properly. Submit your SQL queries in a query.sql file.
 Q1. Write a query to list the names of employees who have not received their salary in April.
