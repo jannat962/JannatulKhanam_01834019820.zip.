@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  
+
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="payment">
+      <div class="payment-logo">
+        <p>C</p>
+      </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <!-- Form Section -->
+      <div class="col-lg-8">
+        <h2 class="mb-4">Checkout Form</h2>
+        <form id="checkout-form" > 
+          <!--  novalidate  -->
+          <div class="row">
+            <h3>Billing Address</h3>
+            <div class="col-md-6 mb-3">
+              <label for="first-name" class="form-label">First Name</label>
+              <input type="text" id="first-name" class="form-control" placeholder="Jannatul" required>
+              <div class="invalid-feedback">First name is required.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="last-name" class="form-label">Last Name</label>
+              <input type="text" id="last-name" class="form-control" placeholder="Khanam" required>
+              <div class="invalid-feedback">Last name is required.</div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="fa-brands fa-algolia"></i></span>
+            <input type="text" id="username" class="form-control" placeholder="Username" required>
+            <div class="invalid-feedback">Username is required.</div>
+          </div>
+          
+          
+          
+          <div class="mb-3">
+            <label for="email" class="form-label">Email (Optional)</label>
+            <input type="email" id="email" class="form-control" placeholder="you@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" id="address" class="form-control" placeholder="123 Main St" required>
+          </div>
+          <div class="mb-3">
+            <label for="address-2" class="form-label">Address 2 (Optional)</label>
+            <input type="text" id="address-2" class="form-control" placeholder="Apartment or suite">
+          </div>
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="country" class="form-label">Country</label>
+              <select id="country" class="form-select" required>
+                <option value="">Choose...</option>
+                <option value="BAN">Bangladesh</option>
+                <option value="USA">United States</option>
+                <option value="CAN">Canada</option>
+                <option value="MEX">Mexico</option>
+                <option value="GBR">United Kingdom</option>
+                <option value="AUS">Australia</option>
+                <option value="IND">India</option>
+                <option value="DEU">Germany</option>
+                <option value="FRA">France</option>
+                <option value="JPN">Japan</option>
+                <option value="CHN">China</option>
+                <option value="BRA">Brazil</option>
+              </select>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="state" class="form-label">State</label>
+              <select id="state" class="form-select" required>
+                <option value="">Choose...</option>
+                <option value="BD-DAC">Dhaka</option>
+                <option value="NY">New York</option>
+                <option value="CA">Los Angeles</option>
+                <option value="IL">Chicago</option>
+                <option value="TX">Houston</option>
+                <option value="AZ">Phoenix</option>
+                <option value="PA">Philadelphia</option>
+                <option value="TX-SA">San Antonio</option>
+                <option value="CA-SD">San Diego</option>
+                <option value="TX-DAL">Dallas</option>
+                <option value="CA-SJ">San Jose</option>
+                <option value="FL">Miami</option>
+                <option value="GA">Atlanta</option>
+                <option value="DC">Washington, D.C.</option>
+                <option value="MA">Boston</option>
+                <option value="NV">Las Vegas</option>
+                <option value="WA">Seattle</option>
+                <option value="CO">Denver</option>
+                <option value="TN">Nashville</option>
+                <option value="MO">St. Louis</option>
+                <option value="WI">Milwaukee</option>
+                <option value="OR">Portland</option>
+                <option value="OK">Oklahoma City</option>
+                <option value="KY">Louisville</option>
+                <option value="NM">Albuquerque</option>
+                <option value="AZ-TUC">Tucson</option>
+                <option value="CA-FR">Fresno</option>
+                <option value="CA-SAC">Sacramento</option>
+                <option value="MO-KC">Kansas City</option>
+                <option value="CO-CS">Colorado Springs</option>
+                <option value="GA-SAV">Savannah</option>
+                <option value="TX-AUS">Austin</option>
+              </select>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="zip" class="form-label">Zip</label>
+              <input type="number" id="zip" class="form-control" placeholder="12345" required>
+            </div>
+            <label>
+              <input type="checkbox" id="sameAddress" name="sameAddress">
+              Shipping address is the same as my billing address
+          </label>
+          <br>
+          <label>
+              <input type="checkbox" id="saveInfo" name="saveInfo">
+              Save this information for next time
+          </label>
+          </div>
+          <hr>
+          <h4>Payment</h4>
+          <div class="form-check">
+            <input type="radio" name="payment-method" id="credit-card" class="form-check-input" checked>
+            <label for="credit-card" class="form-check-label">Credit Card</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" name="payment-method" id="debit-card" class="form-check-input">
+            <label for="debit-card" class="form-check-label">Debit Card</label>
+          </div>
+          <div class="form-check mb-3">
+            <input type="radio" name="payment-method" id="paypal" class="form-check-input">
+            <label for="paypal" class="form-check-label">PayPal</label>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3"> <i class="fas fa-user"></i>
+              <label for="card-name" class="form-label">Card holder:</label>
+              <input type="text" class="input" placeholder="Card holder name">
+              
+              <!-- <input type="text" id="card-name" class="form-control" required> -->
+            </div>
+
+            <div class="col-md-6 mb-3"><i class="far fa-credit-card"></i>
+              <label for="card-number" class="form-label">Card number:</label>
+              <input type="text" class="input" id="card-number" maxlength="19" placeholder="Card Number" oninput="this.value = this.value.replace(/[^0-9\s]/g, '')">
+            </div>
+            
+
+          </div>
+          <div class="row">
+            
+
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <i class="far fa-calendar-alt"></i>
+                <label for="expiration" class="form-label">Expiration</label>
+                <input type="tel" name="expiry-data" class="input" placeholder="00 / 00" maxlength="7" 
+                >
+              </div>
+            
+            
+            <div class="col-md-3 mb-3">
+              <i class="fas fa-lock"></i>
+              <label for="cvv" class="form-label">CVV</label>
+              <input type="number" name="cvv" class="input" placeholder="000" maxlength="3" min="0" max="999" 
+                     oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3)">
+            </div>
+          </div>
+
+          </div>
+          <!-- <button type="submit" class="btn btn-primary w-100">Continue to Checkout</button> -->
+          <button type="submit" class="btn btn-primary w-100 shadow-lg">Continue to Checkout</button>
+        </form>
+      </div>
+
+      <!-- Cart Section -->
+      <div class="col-lg-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span>Your Cart</span>
+          <span class="badge bg-primary rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between">
+            <div>
+              <h6 class="my-0">Apples</h6>
+              <small class="text-muted">Fresh, juicy red apples, perfect for snacking or baking (1 kg)</small>
+            </div>
+            <span>$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <div>
+              <h6 class="my-0">Orange</h6>
+              <small class="text-muted">Sweet and tangy seedless oranges, rich in vitamin C (1.5 kg).</small>
+            </div>
+            <span>$18</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <div>
+              <h6 class="my-0">Mango</h6>
+              <small class="text-muted">Ripe and aromatic mangoes, a tropical delight (0.5kg). </small>
+            </div>
+            <span>$10</span>
+          </li>
+
+          <form id="Redeem-form">
+            <div class="input-group">
+              <input type="text" id="promo-input" class="form-control" placeholder="Promo code">
+              <button type="submit" class="btn btn-secondary">Redeem</button>
+            </div>
+            <div id="promo-message" class="mt-2 text-success" style="display: none;">
+              Promo code applied!
+            </div>
+          </form>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong id="total-price">$33</strong>
+          </li> 
+        </ul>
+        <div id="promo-message" class="alert alert-success mt-3" style="display: none;">
+            Promo code applied successfully!
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+<!-- -----------------------REDEEM------------ -->
+  <script>
+  document.querySelector('#Redeem-from').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the form from submitting
+
+  // Get the promo code input value
+  const promoCodeInput = document.querySelector('input[type="text"][placeholder="Promo code"]');
+  const promoCode = promoCodeInput.value.trim(); // Trim spaces
+
+  // Check if a promo code was entered
+  if (promoCode) {
+    // Show promo code applied message
+    const promoMessage = document.getElementById('promo-message');
+    promoMessage.style.display = 'block'; // Show the message
+
+    // Optionally, disable the promo code input after applying
+    promoCodeInput.disabled = true;
+
+    // Clear the input field (optional)
+    promoCodeInput.value = '';
+  } else {
+    alert('Please enter a promo code.');
+  }
+});
+  </script>
+<!-- =====================PROMOCODE=============== -->
+<script>
+const validPromoCodes = {
+  "FRUITLOVER25": 7,
+  "HEALTHYME10": 5,
+  "JUICYDEAL15": 10,
+  "VITAMINBOOST20": 15,
+  "FRESHFEAST30": 20,
+  "NATURELOVE5": 3,
+  "SWEETBITES12": 8,
+  "CITRUSBLISS10": 6,
+  "MANGOMANIA8": 5,
+  "APPLEADDICT20": 12,
+};
+
+document.getElementById('Redeem-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const promoCodeInput = document.getElementById('promo-input').value.trim();
+  const originalTotal = 33; // Original price before any promo code is applied
+  let discount = 0;
+
+  if (validPromoCodes[promoCodeInput]) {
+    discount = validPromoCodes[promoCodeInput];
+    // Update the total price by subtracting the discount
+    const newTotal = originalTotal - discount;
+    document.getElementById('total-price').textContent = `$${newTotal}`;
+    document.getElementById('promo-message').style.display = 'block';
+    document.getElementById('promo-message').textContent = `Promo code applied! You saved $${discount}.`;
+    document.getElementById('promo-message').classList.replace('text-danger', 'text-success');
+  } else {
+    // If the promo code is invalid, reset the total and show a message
+    document.getElementById('total-price').textContent = `$${originalTotal}`;
+    document.getElementById('promo-message').style.display = 'block';
+    document.getElementById('promo-message').textContent = "Invalid promo code.";
+    document.getElementById('promo-message').classList.replace('text-success', 'text-danger');
+  }
+});
+
+// =================ADD TO PRODUCT IN CART=====================
+
+let cart = [];
+const cartCount = document.getElementById('cart-count');
+const cartItems = document.getElementById('cart-items');
+
+function addToCart(productName, productPrice) {
+  // Add selected product to the cart
+  cart.push({ name: productName, price: productPrice });
+
+  // Update cart count
+  cartCount.textContent = cart.length;
+
+  // Update the cart items in the UI
+  updateCart();
+}
+
+function updateCart() {
+  // Clear the cart display
+  cartItems.innerHTML = '';
+
+  // Add each item in the cart to the UI
+  cart.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between');
+    listItem.innerHTML = `
+      <div>
+        <h6 class="my-0">${item.name}</h6>
+        <small class="text-muted">Description for ${item.name}</small>
+      </div>
+      <span>$${item.price}</span>
+    `;
+    cartItems.appendChild(listItem);
+  });
+}
+
+
+
+</script>  
+
+  
+</body>
+</html>

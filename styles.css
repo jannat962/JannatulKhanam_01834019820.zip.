@@ -1,0 +1,347 @@
+
+
+  /* General Styles */
+body {
+    /* background: linear-gradient(to right, #f9f9f9, #e9ecef); */
+    background: linear-gradient(to right, #bebdf8, #89bcf0);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .payment-logo{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 85px;
+  }
+  .payment-logo:before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    background: #2196F3;
+    border-radius: 50%;
+  }
+  .payment-logo p{
+    position: relative;
+    color: #f8f8f8;
+    font-family: 'Baloo Bhaijaan', cursive;
+    font-size: 58px;
+  }    
+
+  .container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form Title */
+  h2, h4 , h3{
+    font-weight: 600;
+    color:  #0d3c61;
+    margin-bottom: 20px;
+    /* background: linear-gradient(to right, #1848a0, #e9ecef); */
+  }
+  
+.mb-4{
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 70px;
+  color: #0d3c61;
+}
+  /* Input Fields */
+  input, select {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  input:focus, select:focus {
+    border-color:  #0d3c61;
+    box-shadow: 0 0 8px  #0d3c61;
+  }
+  
+  /* Styling for form inputs */
+.input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  margin-top: 5px;
+}
+
+.input:focus {
+  border-color: #282188;
+  box-shadow: 0 0 5px rgba(39, 66, 155, 0.548);
+}
+
+/* Label styling */
+.form-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+/* Icons within inputs */
+.row .fas,
+.row .far {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 39px;
+  font-size: 16px;
+  color: #4CAF50;
+}
+
+.row .col-md-6,
+.row .col-md-3 {
+  position: relative;
+}
+
+/* Input padding for icons */
+.input {
+  padding-left: 35px;
+}
+
+/* Row and Column spacing */
+.row {
+  margin-bottom: 20px;
+}
+
+.col-md-6,
+.col-md-3 {
+  padding: 10px;
+}
+
+/* Input background for a modern look */
+.input {
+  background: linear-gradient(to bottom right, #fff, #f8f9fa);
+}
+
+/* Hover effects */
+.input:hover {
+  border-color:#1f204e;
+}
+
+/* Button styling for submit */
+.btn-primary {
+  background-color: #1f204e;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #5ba1db;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Error highlighting (Optional) */
+.input:invalid {
+  border-color: #f44336;
+}
+
+.input:invalid:focus {
+  box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .row .fas,
+  .row .far {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  .input {
+    padding-left: 30px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
+
+/* Style the input group container */
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style the input field */
+.input-group .form-control {
+  padding-left: 35px; /* Add padding to the left so the text doesn't overlap the icon */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-size: 16px;
+  height: 40px; /* Control the height of the input */
+}
+
+/* Style the input group icon */
+.input-group .input-group-text {
+  position: absolute;
+  left: 10px; /* Adjust to position the icon inside the input */
+  top: 50%;
+  transform: translateY(-50%); /* Center the icon vertically */
+  font-size: 18px; /* Size of the icon */
+  color: #007bff; /* Color of the icon */
+  background-color: transparent; /* Transparent background for the icon */
+  border: none; /* Remove the default border */
+}
+
+/* Optional: Focus styles for the input */
+.input-group .form-control:focus {
+  border-color: #007bff; /* Change border color when focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+
+/* Optional: Add a hover effect to the input */
+.input-group .form-control:hover {
+  border-color: #0056b3; /* Darker border color when hovering */
+}
+
+/* Optional: Style for the input group when there is an invalid input */
+.input-group .form-control.is-invalid {
+  border-color: #dc3545; /* Red border for invalid inputs */
+}
+
+.input-group .invalid-feedback {
+  color: #dc3545; /* Red text for invalid feedback */
+  font-size: 14px;
+}
+/* Bootstrap default styling for invalid inputs */
+.is-invalid {
+  border-color: #dc3545 !important;
+  background-color: #f8d7da !important;
+}
+
+/* Styling the invalid feedback */
+.invalid-feedback {
+  display: none;
+  color: #dc3545;
+  font-size: 14px;
+}
+
+/* Display invalid feedback when the field is invalid */
+.is-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+
+
+/* ------- */
+  /* Form Labels */
+  label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Payment Section */
+  .form-check-label {
+    font-size: 15px;
+    color: #444;
+  }
+  
+  /* Buttons */
+  button {
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background:  #0d3c61;
+    color: #fff;
+  }
+  
+  /* Cart Section */
+  /* .list-group-item {
+    border: none;
+  }
+  
+  .list-group-item.bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .list-group-item span {
+    font-weight: 600;
+    color: #333;
+  }
+   */
+/* Cart Section */
+.list-group-item {
+    border: none;
+    border-radius: 0.25rem; /* Add rounded corners for uniqueness */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .list-group-item.bg-light {
+    background-color: #f8f9fa !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  .list-group-item span {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .list-group-item:hover {
+    background-color: #e9ecef; /* Change background color on hover */
+    transform: scale(1.02); /* Slightly scale up for effect */
+  }
+  
+  .list-group-item.active {
+    background-color: #0d3c61 !important; /* Add Bootstrap's primary color */
+    color: #fff !important; /* Ensure text is visible on active item */
+    font-weight: bold; /* Make the active item text bold */
+  }
+  
+
+
+
+
+
+  /* Promo Code */
+  .input-group input {
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .input-group button {
+    border-radius: 0 8px 8px 0;
+  }
+  
+  /* Add subtle animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .container {
+    animation: fadeIn 0.8s ease-in-out;
+  }
